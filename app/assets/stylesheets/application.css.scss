@@ -14,3 +14,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+//error
+
+#error_explanation,
+.alert,
+.notice {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}

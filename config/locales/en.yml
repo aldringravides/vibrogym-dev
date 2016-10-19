@@ -1,5 +1,25 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  devise:
+    passwords:
+      new:
+        email: "Email"
+        legend: "Forgot your password?"
+        send_me_reset_password_instructions: "Send me reset password instructions"
+    sessions:
+      new:
+        legend: "Log In"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember Me"
+    shared:
+      log_in: "Log in"
+      forgot_your_password: "Forgot your password"
+  shared:
+    navbar:
+      title: "Vibro GYM"
+      home: "Home"
+      about: "About Us"
+      contact: "Contact"
+      sign_in: "Sign In"
+    error:
+      intro: "The form contains "
