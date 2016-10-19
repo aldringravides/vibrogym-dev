@@ -12,19 +12,26 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="<%= "active" if action_name == 'home' %>">
-          <%= link_to t(".home"), root_path %>
-        </li>
-        <li class="<%= "active" if action_name == 'about' %>">
-          <%= link_to t(".about"), about_path %>
-        </li>
-        <li class="<%= "active" if action_name == 'contact' %>">
-          <%= link_to t(".contact"), contact_path %>
-        </li>
+        <% unless current_user %>
+          <li class="<%= "active" if action_name == "home" %>">
+            <%= link_to t(".home"), root_path %>
+          </li>
+          <li class="<%= "active" if action_name == "about" %>">
+            <%= link_to t(".about"), about_path %>
+          </li>
+          <li class="<%= "active" if action_name == "contact" %>">
+            <%= link_to t(".contact"), contact_path %>
+          </li>
+        <% else %>
+          <li class="<%= "active" if controller_name == "contents" and
+          action_name == "index" %>">
+            <%= link_to "Contents", contents_path %>
+          </li>
+        <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="<%= "active" if controller_name == "sessions" and
-          action_name == 'new' %>">
+          action_name == "new" %>">
           <% unless current_user %>
             <%= link_to new_user_session_path do %>
               <%= t ".log_in" %>
