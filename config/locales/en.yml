@@ -21,5 +21,7 @@ en:
       about: "About Us"
       contact: "Contact"
       sign_in: "Sign In"
+      log_in: "Log In"
+      log_out: "Log Out"
     error:
       intro: "The form contains "
