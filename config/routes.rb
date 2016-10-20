@@ -5,4 +5,9 @@ VibrogymDev::Application.routes.draw do
   get "about" => "pages#about"
   get "contact" => "pages#contact"
   resources :contents, only: [:index]
+  resource :users, only: [:edit] do
+    collection do
+      put "update_password"
+    end
+  end
 end

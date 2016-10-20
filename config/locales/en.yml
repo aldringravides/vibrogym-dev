@@ -25,3 +25,10 @@ en:
       log_out: "Log Out"
     error:
       intro: "The form contains "
+  users:
+    edit:
+      legend: "Change Password"
+      password: "Password"
+      password_confirmation: "Confirm Password"
+      current_password: "Current Password"
+      update: "Update"
